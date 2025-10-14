@@ -1,0 +1,3 @@
+docker run dockerimg1
+docker run -p 8000:8000 dockerimg1
+docker build -t dockerimg .  
