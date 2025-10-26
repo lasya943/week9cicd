@@ -1,5 +1,9 @@
 pipeline {
-    agent any   
+    agent any
+    environment {
+        // Ensure Jenkins picks up your system-wide kubeconfig
+        KUBECONFIG = "${env.KUBECONFIG}"
+    } 
     stages {
         stage('Build Docker Image') {
             steps {
